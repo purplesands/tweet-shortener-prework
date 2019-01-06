@@ -11,10 +11,10 @@ def dictionary
     "at" => "@",
     "and" => "&",
   }
-end
+end #set keys
 
 def word_substituter(tweet)
-  tweet.split.collect do |word|
+  tweet.split.collect do |word| #convert to string
     if dictionary.keys.include?(word.downcase)
       word = dictionary[word.downcase]
     else
